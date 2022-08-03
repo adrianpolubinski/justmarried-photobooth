@@ -1,0 +1,53 @@
+$breakpoints: (
+    zero: 0,
+    mobile: 768px,
+    tablet: 1024px,
+    desktop-small: 1200px,
+    desktop: 1400px
+);
+
+$orientations: (
+    portrait: portrait,
+    landscape: landscape
+);
+
+$colors: (
+    white-1: #FFFFFF,
+    black-1: #000000,
+);
+
+$font-sizes: (
+  size-16: 1.6rem,
+);
+
+$line-heights: (
+  size-1-25: 1.25,
+);
+
+$font-weights: (
+  regular: 400,
+  semibold: 600,
+  bold: 700,
+);
+
+$fonts: (
+    main: #{'Georama',
+    sans-serif}
+);
+
+$spacings: (
+    size-100: 10rem,
+);
+
+$z-indexes: (
+  hidden: -1px,
+  base: 1,
+  popup: 9,
+  header: 10,
+  overlay: 98,
+  modal: 99,
+);
+
+$size-inner-padding-val: 2rem;
+$size-inner-padding: 0 $size-inner-padding-val;
+$size-inner-width: 122rem;

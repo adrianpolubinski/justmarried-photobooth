@@ -1,0 +1,162 @@
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    } @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+@mixin color-modifiers {
+    @each $name, $hex in $colors {
+        &-#{$name} {
+            color: $hex;
+        }
+    }
+}
+
+@mixin background-modifiers {
+    @each $name, $hex in $colors {
+        &-#{$name} {
+            background-color: $hex;
+        }
+    }
+}
+
+@mixin font-weight-modifiers {
+    @each $name, $value in $font-weights {
+        &-#{$name} {
+            font-weight: $value;
+        }
+    }
+}
+
+@mixin transition($duration: 250ms, $timing: linear, $property: opacity) {
+    transition: $property $duration $timing;
+}
+
+@mixin button-reset() {
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+@mixin list-reset() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin input-reset {
+   background: none;
+   border: none;
+
+   &:focus {
+      outline: 0;
+   }
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin line-clamp($max-lines: 3) {
+    overflow: hidden;
+    display: box;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $max-lines;
+}
+
+@mixin image-full($object-fit: cover) {
+    width: 100%;
+    height: 100%;
+
+    object-fit: $object-fit;
+}
+
+@mixin filler() {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &::before {
+        content: '';
+
+        display: block;
+
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > * {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@mixin flex-center-vertically {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horizontally {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin generate-font-size-utilities() {
+    @each $breakpoint, $_ in $breakpoints {
+        @include media($breakpoint) {
+            @each $size, $value in $font-sizes {
+                &-#{$size} {
+                    &#{infix($breakpoint)} {
+                        font-size: #{$value};
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin generate-line-height-utilities() {
+    @each $breakpoint, $_ in $breakpoints {
+        @include media($breakpoint) {
+            @each $size, $value in $line-heights {
+                &-#{$size} {
+                    &#{infix($breakpoint)} {
+                        line-height: #{$value};
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin generate-spacing-utilities() {
+    @each $breakpoint, $_ in $breakpoints {
+        @include media($breakpoint) {
+            @each $size, $value in $spacings {
+                &-#{$size} {
+                    &#{infix($breakpoint)} {
+                        margin-bottom: #{$value};
+                    }
+                }
+            }
+        }
+    }
+}

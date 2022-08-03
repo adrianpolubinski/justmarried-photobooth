@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_name }} - COMPANY_NAME</title>
+    <link href="main.css" rel="stylesheet" />
+  </head>
+
+  <body class="l-body">
+    <div class="l-page">
+      {% include "partials/header.njk" %}
+      <main class="l-main">
+        {% block content %}{% endblock %}
+      </main>       
+      {% include "partials/footer.njk" %}
+    </div>
+     {% include "partials/scripts.njk" %}
+  </body>
+</html>

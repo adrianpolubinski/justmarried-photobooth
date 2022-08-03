@@ -1,0 +1,17 @@
+.sass-cache/
+node_modules/
+bower_components/
+public/
+validation-report.json
+validation-status.json
+.DS_Store
+.husky/.DS_Store
+.yarn-error.log
+vendor/
+.htaccess
+Thumbs.db
+.Trashes
+error_log
+stats/
+cgi-local/
+auth.json

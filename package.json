@@ -1,0 +1,55 @@
+{
+  "name": "justmarried-photobooth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "repository": "https://github.com/adrianpolubinski/justmarried-photobooth.git",
+  "keywords": [],
+  "author": "Adrian Połubiński <polubinski.a@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianpolubinski/justmarried-photobooth/issues"
+  },
+  "homepage": "https://github.com/adrianpolubinski/justmarried-photobooth#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "browser-sync": "^2.27.9",
+    "del": "^6.1.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-beautify": "^3.0.0",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "require-dir": "^1.2.0",
+    "sass": "^1.51.0",
+    "stylelint": "^14.9.1",
+    "stylelint-config-clean-order": "^0.8.0",
+    "stylelint-config-css-modules": "^4.1.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "webpack": "^5.74.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "lint-staged": {
+    "**/*.scss": "stylelint --fix",
+    "**/*.js": [
+      "prettier --write",
+      "eslint"
+    ]
+  }
+}

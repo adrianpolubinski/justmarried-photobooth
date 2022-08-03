@@ -1,0 +1,38 @@
+.u-hide {
+    display: none;
+
+    &-mobile {
+        @include media(0, mobile) {
+            display: none;
+        }
+    }
+
+    &-from-mobile {
+        @include media(mobile) {
+            display: none;
+        }
+    }
+
+    &-tablet {
+        @include media(mobile, tablet) {
+            display: none;
+        }
+    }
+
+    &-desktop-small {
+        @include media(tablet, desktop-small) {
+            display: none;
+        }
+    }
+
+    &-desktop {
+        @include media(desktop-small) {
+            display: none;
+        }
+    }
+}
+
+.t {
+    @include generate-font-size-utilities;
+    @include generate-line-height-utilities;
+}

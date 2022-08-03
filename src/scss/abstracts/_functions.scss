@@ -1,0 +1,55 @@
+/* stylelint-disable at-rule-empty-line-before */
+@use 'sass:map';
+
+@function get-value-from-map($map, $keys...) {
+    @each $key in $keys {
+        @if (map-has-key($map, $key) == false) {
+            @warn 'Invalid key: \'#{$key}\'.';
+            @return null;
+        }
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function breakpoint($key) {
+    @return get-value-from-map($breakpoints, $key);
+}
+
+@function orientation($key) {
+    @return get-value-from-map($orientations, $key);
+}
+
+@function color($key) {
+    @return get-value-from-map($colors, $key);
+}
+
+@function font-size($key) {
+    @return get-value-from-map($font-sizes, $key);
+}
+
+@function line-height($key) {
+    @return get-value-from-map($line-heights, $key);
+}
+
+@function font-weight($key) {
+    @return get-value-from-map($font-weights, $key);
+}
+
+@function font($key) {
+    @return get-value-from-map($fonts, $key);
+}
+
+@function z-index($key) {
+    @return get-value-from-map($z-indexes, $key);
+}
+
+@function infix($breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $value > 0 {
+        @return \@#{$breakpoint};
+    } @else {
+        @return '';
+    }
+}

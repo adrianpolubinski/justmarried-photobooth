@@ -1,0 +1,38 @@
+html {
+    @include font-smoothing(on);
+
+    scroll-behavior: smooth;
+
+    height: 100%;
+
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100%;
+
+    font-family: font(main);
+    font-size: font-size(size-16);
+    line-height: line-height(size-1-25);
+}
+
+// Typography helpers
+.t-center {
+    text-align: center;
+}
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-lower {
+    text-transform: lowercase;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}
