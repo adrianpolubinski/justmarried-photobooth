@@ -3,7 +3,7 @@ export default class Slider {
   constructor() {
     this.currentSlide = 0;
     this.slidesArray = [];
-    this.paginationItemArray = [];
+    this.paginationItemsArray = [];
     this.sliderTimeout = null;
 
     this.slidesList = null;
@@ -54,42 +54,41 @@ export default class Slider {
     this.sliderNavigationButtonRight.addEventListener('mouseenter', this.stopAutoPlayHandler);
   }
 
-  generateSliderHandler= ()=> {
-    let templateStringSlider= "";
-    let templateStringPagination=""
+  generateSliderHandler = () => {
+    let templateStringSlider = '';
+    let templateStringPagination = '';
     for (let i = 0; i < slidesArray.length; i++) {
-        templateStringSlider += `
+      templateStringSlider += `
         <li class="c-slides-list__item js-slide" style="background-image: url(${slidesArray[i].path})">
             <div class="c-slide-box">
                 <p class="c-slide-box__text">${slidesArray[i].description}</p>
             </div>
-        </li>`
-        templateStringPagination += `<li class="c-pagination-list__item js-pagination"></li>`
-      }
-      this.slidesList.innerHTML= templateStringSlider;
-      this.paginationList.innerHTML = templateStringPagination;
+        </li>`;
+      templateStringPagination += `<li class="c-pagination-list__item js-pagination"></li>`;
+    }
+    this.slidesList.innerHTML = templateStringSlider;
+    this.paginationList.innerHTML = templateStringPagination;
 
-      this.slidesArray = document.querySelectorAll(".js-slide");
-      this.paginationItemArray = document.querySelectorAll(".js-pagination");
+    this.slidesArray = document.querySelectorAll('.js-slide');
+    this.paginationItemsArray = document.querySelectorAll('.js-pagination');
 
-      this.slidesArray[0].classList.toggle(this.state.isActive);
-      this.paginationItemArray[0].classList.toggle(this.state.isActive);
-  }
+    this.slidesArray[0].classList.toggle(this.state.isActive);
+    this.paginationItemsArray[0].classList.toggle(this.state.isActive);
+  };
 
-
-  stopAutoPlayHandler=()=> {
+  stopAutoPlayHandler = () => {
     clearInterval(this.sliderTimeout);
-  }
+  };
 
-  startAutoPlayHandler=()=> {
+  startAutoPlayHandler = () => {
     this.sliderTimeout = setInterval(this.nextSlideChangeHandler, 5000);
-  }
+  };
 
-  changeStateHandler=(currentSlide) =>{
+  changeStateHandler = (currentSlide) => {
     this.slidesArray[currentSlide].classList.toggle(this.state.isActive);
-    this.paginationItemArray[currentSlide].classList.toggle(this.state.isActive);
-  }
-  prevSlideChangeHandler =()=>{
+    this.paginationItemsArray[currentSlide].classList.toggle(this.state.isActive);
+  };
+  prevSlideChangeHandler = () => {
     this.changeStateHandler(this.currentSlide);
     if (this.currentSlide === 0) {
       this.currentSlide = this.slidesArray.length - 1;
@@ -98,8 +97,8 @@ export default class Slider {
       this.currentSlide--;
       this.changeStateHandler(this.currentSlide);
     }
-  }
-  nextSlideChangeHandler=()=> {
+  };
+  nextSlideChangeHandler = () => {
     this.changeStateHandler(this.currentSlide);
     if (this.currentSlide < this.slidesArray.length - 1) {
       this.currentSlide++;
@@ -107,9 +106,5 @@ export default class Slider {
       this.currentSlide = 0;
     }
     this.changeStateHandler(this.currentSlide);
-  }
-
-
-
-
+  };
 }

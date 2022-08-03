@@ -9,3 +9,8 @@ brandAnimation.init();
 import Slider from './modules/slider';
 const slider = new Slider();
 slider.init();
+
+
+import Calendar from './modules/calendar';
+const calendar = new Calendar();
+calendar.init();

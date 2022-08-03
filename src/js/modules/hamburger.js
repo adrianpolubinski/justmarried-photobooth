@@ -1,11 +1,11 @@
 export default class Hamburger {
   constructor() {
-    this.hamburger = null;
     this.header = null;
+    this.hamburger = null;
 
     this.selector = {
-      hamburger: '.js-hamburger',
-      header: '.js-header'
+      header: '.js-header',
+      hamburger: '.js-hamburger'
     };
 
     this.state = {
@@ -14,10 +14,10 @@ export default class Hamburger {
   }
 
   init() {
-    this.hamburger = document.querySelector(this.selector.hamburger);
     this.header = document.querySelector(this.selector.header);
+    this.hamburger = document.querySelector(this.selector.hamburger);
 
-    const shouldContinue = !!this.hamburger && !!this.header;
+    const shouldContinue =  !!this.header && !!this.hamburger;
 
     if (!shouldContinue) return;
 
@@ -30,5 +30,5 @@ export default class Hamburger {
 
   openMenuHandler = () => {
     this.header.classList.toggle(this.state.isOpen);
-  }
+  };
 }

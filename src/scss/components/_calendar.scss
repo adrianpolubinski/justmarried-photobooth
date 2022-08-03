@@ -1,0 +1,39 @@
+.c-calendar {
+    font-size: font-size(size-12);
+
+    @include media(mobile) {
+        font-size: font-size(size-16);
+    }
+}
+
+.c-calendar__title {
+    margin-bottom: 2rem;
+
+    font-size: font-size(size-32);
+    text-align: center;
+
+    @include media(mobile) {
+        font-size: font-size(size-40);
+    }
+
+    @include media(desktop-small) {
+        font-size: font-size(size-50);
+    }
+}
+
+.c-calendar__header {
+    @include flex-center;
+}
+
+.c-calendar__month-info-box {
+    margin: 0 2rem;
+}
+
+.c-calendar__selected-month,
+.c-calendar__month-label {
+    text-align: center;
+}
+
+.c-calendar__legend-list-wrapper {
+    @include flex-center-horizontally;
+}

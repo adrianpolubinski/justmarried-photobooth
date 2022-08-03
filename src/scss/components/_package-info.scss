@@ -14,13 +14,25 @@
 }
 
 .c-package-info--navy-blue {
-    background: linear-gradient(180deg, rgb(64 56 194 / 100%) 0%, rgb(105 67 255 / 100%) 100%,
-    rgb(87 19 235 / 100%) 100%, rgb(120 19 235 / 100%) 100%);
+    background:
+        linear-gradient(
+            180deg,
+            rgb(64 56 194 / 100%) 0%,
+            rgb(105 67 255 / 100%) 100%,
+            rgb(87 19 235 / 100%) 100%,
+            rgb(120 19 235 / 100%) 100%
+        );
 }
 
 .c-package-info--green {
-    background: linear-gradient(180deg, rgb(85 131 38 / 100%) 0%, rgb(33 181 93 / 100%) 100%,
-    rgb(87 19 235 / 100%) 100%, rgb(120 19 235 / 100%) 100%);
+    background:
+        linear-gradient(
+            180deg,
+            rgb(85 131 38 / 100%) 0%,
+            rgb(33 181 93 / 100%) 100%,
+            rgb(87 19 235 / 100%) 100%,
+            rgb(120 19 235 / 100%) 100%
+        );
 }
 
 .c-package-info--orange {

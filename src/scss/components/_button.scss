@@ -1,0 +1,14 @@
+.c-button {
+    background-color: color(gray-1);
+}
+
+.c-button__icon {
+    font-size: font-size(size-16);
+}
+
+.c-button--calendar {
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 25%;
+}

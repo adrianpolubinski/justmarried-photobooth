@@ -1,0 +1,23 @@
+.c-weekday-list{
+   @include list-reset();
+    margin: 25px 0 10px 0;
+}
+
+.c-weekday-list--full{
+    display: none;
+    @include media(mobile){
+        display: flex;
+    }
+}
+
+.c-weekday-list--shortcuts{
+    display: flex;
+    @include media(mobile){
+        display: none;
+    }
+}
+
+.c-weekday-list__item{
+    width: calc(100% / 7);
+    text-align: center;
+}

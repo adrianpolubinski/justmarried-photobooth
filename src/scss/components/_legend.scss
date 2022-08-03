@@ -1,0 +1,45 @@
+.c-legend-list{
+    @include list-reset();
+    @include flex-center-horizontally;
+    justify-content: space-between;
+    // font-size: font-size(size-12);
+    // max-width: 400px;
+}
+
+.c-legend-list__item{
+   @include flex-center-vertically;
+   text-align: center;
+   font-size: 1em;
+   margin: 0 .75rem 0 .75rem;
+
+    &::before{
+        display: block;
+        content: "";
+        border-radius: 50%;
+        min-width: 1em;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5rem;
+    }
+}
+
+
+.c-legend-list__item--one-term{
+    &::before{
+    background-color: color(orange-1);
+    }
+}
+
+
+.c-legend-list__item--two-term{
+    &::before{
+    background-color: color(red-1);
+    }
+}
+
+
+.c-legend-list__item--actual-day{
+    &::before{
+    background-color: color(white-1);
+    }
+}

@@ -1,5 +1,5 @@
 // Vendor
-@import '../../../node_modules/normalize.css/normalize.css';
+// @import '../../../node_modules/normalize.css/normalize.css';
 
 // Abstracts
 @import
@@ -23,8 +23,12 @@
 
 // Components
 @import
+    './components/button',
+    './components/calendar',
+    './components/day-list',
     './components/hamburger',
     './components/header',
+    './components/legend',
     './components/main-nav',
     './components/option-list',
     './components/package-info',
@@ -35,4 +39,5 @@
     './components/slide-box',
     './components/slider-navigation',
     './components/slider',
-    './components/slides-list';
+    './components/slides-list',
+    './components/weekday-list';

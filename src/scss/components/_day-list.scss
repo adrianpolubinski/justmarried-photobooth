@@ -1,0 +1,42 @@
+.c-day-list {
+  @include list-reset();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 300px;
+  
+}
+
+.c-day-list__item {
+  @include flex-center();
+  width: calc(100% / 7);
+  
+}
+
+.c-day-list__day {
+  @include flex-center();
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    background-color: color(gray-1);
+  }
+}
+
+
+
+.c-day-list__day--current-day {
+  background-color: color(white-1);
+  color: color(black-1);
+}
+
+.c-day-list__day--previous-month {
+  color: color(gray-1);
+}
+
+
+.c-day-list__day--next-month {
+    color: color(gray-1);
+  }
+  
