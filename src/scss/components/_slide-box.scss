@@ -1,0 +1,31 @@
+.c-slide-box {
+  @include flex-center-vertically;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 70%;
+  height: 30%;
+  padding: 10px;
+  transition: 0.3s;
+  transform: translateX(-50%);
+  text-align: center;
+  color: color(white-1);
+  box-shadow: 0 0 2rem color(black-1);
+  border-radius: 2rem;
+  background-color: color(black-1-75);
+  font-size: font-size(size-18);
+
+@include media(mobile) {
+    max-width: 650px;
+    border-width: 2px;
+    font-size: font-size(size-32);
+  }
+
+@include media(desktop) {
+    max-width: 800px;
+    height: 20%;
+    border-width: 3px;
+    font-size: font-size(size-40);
+  }
+}
+

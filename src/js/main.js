@@ -5,3 +5,7 @@ hamburger.init();
 import BrandAnimation from './animations/brand';
 const brandAnimation = new BrandAnimation();
 brandAnimation.init();
+
+import Slider from './modules/slider';
+const slider = new Slider();
+slider.init();

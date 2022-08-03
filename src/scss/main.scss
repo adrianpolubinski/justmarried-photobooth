@@ -18,10 +18,16 @@
 
 // Layouts
 @import
-    './layouts/inner';
+    './layouts/inner',
+    './layouts/slider';
 
 // Components
 @import
     './components/hamburger',
     './components/header',
-    './components/main-nav';
+    './components/main-nav',
+    './components/pagination-list',
+    './components/slide-box',
+    './components/slider-navigation',
+    './components/slider',
+    './components/slides-list';

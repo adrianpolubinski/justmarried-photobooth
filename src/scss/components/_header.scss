@@ -1,6 +1,7 @@
 .c-header {
     @include flex-center-vertically;
 
+    z-index: z-index(header);
     position: relative;
 
     justify-content: space-between;

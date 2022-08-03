@@ -12,6 +12,7 @@ $orientations: (
 $colors: (
     white-1: #FFFFFF,
     black-1: #000000,
+    black-1-75: rgb(0 0 0 / 75%),
     gray-1: #808080,
     gray-4: #FAFAFA,
     bg-body-1: #070918,
@@ -22,7 +23,9 @@ $font-sizes: (
     size-18: 1.8rem,
     size-20: 2rem,
     size-32: 3.2rem,
-    size-50: 5rem
+    size-40: 4rem,
+    size-50: 5rem,
+    size-74: 7.4rem
 );
 $line-heights: (
     size-1-25: 1.25,
@@ -34,7 +37,7 @@ $font-weights: (
 );
 $fonts: (
     main: #{'Georama',
-    sans-serif}
+    sans-serif},
 );
 $spacings: (
     size-100: 10rem,

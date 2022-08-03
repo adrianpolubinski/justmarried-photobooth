@@ -1,0 +1,36 @@
+.c-pagination-list {
+    @include list-reset;
+
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+}
+
+.c-pagination-list__item {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+
+    background: color(white-1);
+    border: 2px solid color(white-1);
+    border-radius: 50%;
+
+    transition: background .5s ease-in-out;
+
+    @include media(mobile) {
+        width: 14px;
+        height: 14px;
+    }
+
+    @include media(desktop) {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.c-pagination-list__item.is-active {
+    background: color(brand-color);
+}

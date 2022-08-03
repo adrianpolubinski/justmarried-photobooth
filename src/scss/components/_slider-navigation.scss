@@ -1,0 +1,38 @@
+.c-slider-navigation__button {
+@include button-reset();
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  background-color: color(black-1-75);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.c-slider-navigation__button--left {
+  left: 0;
+  box-shadow: 4px 0px 4px color(black-1);
+}
+
+.c-slider-navigation__button--right {
+  right: 0;
+  box-shadow: -4px 0px 4px color(black-1);
+}
+
+.c-slider-navigation__arrow-ico {
+  transition: 0.3s;
+  color: color(white-1);
+  font-size: font-size(size-32);
+
+@include media(mobile) {
+    font-size: font-size(size-50);
+  }
+
+@include media(desktop) {
+    font-size: font-size(size-74);
+  }
+}
+
+.c-slider-navigation__button:hover .c-slider-navigation__arrow-ico {
+    color: color(brand-color);
+  }

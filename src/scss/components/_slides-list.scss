@@ -1,0 +1,19 @@
+.c-slides-list{
+    @include list-reset();
+}
+
+.c-slides-list__item{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: .3s;
+}
+
+.c-slides-list__item.is-active {
+    opacity: 1;
+  }
