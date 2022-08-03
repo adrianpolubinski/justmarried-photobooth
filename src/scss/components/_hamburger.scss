@@ -56,14 +56,14 @@
 }
 
 .c-hamburger:hover .c-hamburger__lines {
-    background-color: color(brand-color);
+    background-color: color(brand);
 
     &::before {
-        background-color: color(brand-color);
+        background-color: color(brand);
     }
 
     &::after {
-        background-color: color(brand-color);
+        background-color: color(brand);
     }
 }
 

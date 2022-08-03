@@ -1,7 +1,6 @@
 .c-button {
     @include button-reset;
 
-    background-color: color(gray-2);
 }
 
 .c-button__icon {
@@ -22,4 +21,9 @@
     font-size: font-size(size-16);
 
     border: 2px solid color(white-1);
+}
+
+
+.c-button--go-to-up {
+    font-size: font-size(size-16);
 }
