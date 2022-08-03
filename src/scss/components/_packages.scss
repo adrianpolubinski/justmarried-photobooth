@@ -1,0 +1,27 @@
+.c-packages__title {
+    padding: 1rem 0;
+
+    font-size: font-size(size-32);
+    text-align: center;
+
+    @include media(mobile) {
+        font-size: font-size(size-40);
+    }
+
+    @include media(desktop-small) {
+        font-size: font-size(size-50);
+    }
+}
+
+.c-packages__subtitle {
+    font-size: font-size(size-18);
+    text-align: center;
+
+    @include media(mobile) {
+        font-size: font-size(size-24);
+    }
+
+    @include media(desktop-small) {
+        font-size: font-size(size-28);
+    }
+}

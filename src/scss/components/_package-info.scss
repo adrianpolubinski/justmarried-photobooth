@@ -1,0 +1,52 @@
+.c-package-info {
+    @include flex-center;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    border-radius: 1rem;
+    box-shadow: 0 0 1.7rem -.3rem rgb(66 68 90 / 100%);
+
+    // @include media(tablet) {
+    //     width: 340px;
+    // }
+}
+
+.c-package-info--navy-blue {
+    background: linear-gradient(180deg, rgb(64 56 194 / 100%) 0%, rgb(105 67 255 / 100%) 100%,
+    rgb(87 19 235 / 100%) 100%, rgb(120 19 235 / 100%) 100%);
+}
+
+.c-package-info--green {
+    background: linear-gradient(180deg, rgb(85 131 38 / 100%) 0%, rgb(33 181 93 / 100%) 100%,
+    rgb(87 19 235 / 100%) 100%, rgb(120 19 235 / 100%) 100%);
+}
+
+.c-package-info--orange {
+    background: linear-gradient(180deg, rgb(255 132 0 / 100%) 0%, rgb(255 147 23 / 100%) 100%);
+}
+
+.c-package-info__name {
+    font-size: font-size(size-26);
+
+    @include media(mobile) {
+        font-size: font-size(size-32);
+    }
+
+    @include media(desktop-small) {
+        font-size: font-size(size-28);
+    }
+}
+
+.c-package-info__price {
+    font-size: font-size(size-24);
+
+    @include media(mobile) {
+        font-size: font-size(size-30);
+    }
+
+    @include media(desktop-small) {
+        font-size: font-size(size-26);
+    }
+}

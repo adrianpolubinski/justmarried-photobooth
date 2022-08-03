@@ -13,6 +13,7 @@ const browserSyncTask = () => {
     gulp.watch(["src/scss/**/*.scss"]).on("change", gulp.parallel("sass"));
     gulp.watch(["src/js/**/*.js"]).on("change", gulp.parallel("webpack"));
     gulp.watch(["src/img/**/*.{jpg,jpeg,png,gif}"]).on("change", gulp.parallel("imgLoad"));
+    gulp.watch(["src/fonts/**/*.{woff, woff2}"]).on("change", gulp.parallel("fontsLoad"));
 
     browserSync.init(files, {
         server: "public/",

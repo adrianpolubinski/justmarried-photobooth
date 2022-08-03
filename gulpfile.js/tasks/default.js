@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 
 const defaultTask = async () => {
-    const runTasks = gulp.series("imgLoad", "nunjucks", "sass", "webpack", "browserSync");
+    const runTasks = gulp.series("imgLoad", 'fontsLoad', "nunjucks", "sass", "webpack", "browserSync");
 
     runTasks();
 }

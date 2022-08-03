@@ -1,0 +1,22 @@
+.c-package {
+    position: relative;
+
+    margin-top: 7rem;
+    padding: 1rem;
+
+    background-color: color(white-1);
+    border-radius: 1rem;
+}
+
+.c-package__package-info-container {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60%;
+    height: 10rem;
+
+    color: color(white-1);
+    text-align: center;
+}
