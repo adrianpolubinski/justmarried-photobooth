@@ -1,0 +1,24 @@
+.c-info-list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    @include media(mobile){
+        flex-direction: row;
+    }
+    @include media(desktop-small){
+        flex-direction: column;
+        
+    }
+}
+
+
+.c-info-list__item{
+    font-size: 1.5em;
+    
+}
+
+
+.c-info-list__item:not(:last-child){
+    margin-bottom: 10px;
+}

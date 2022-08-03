@@ -1,0 +1,92 @@
+<section class="l-contact s-bottom-100">
+  <div class="l-inner">
+    <div class="c-contact">
+      <h1 class="c-contact__title">Skontaktuj się z nami</h1>
+      <div class="c-contact__content">
+        <div class="c-contact__form-container">
+          <form class="f-form" method="POST" action="mailer">
+            <div class="f-form__input-wrapper">
+              <label for="username" class="f-form__label"
+                >Imię i nazwisko:</label
+              >
+              <input
+                id="username"
+                type="text"
+                class="f-form__input"
+                name="name"
+                required
+              />
+            </div>
+            <div class="f-form__input-wrapper">
+              <label for="phone" class="f-form__label">Numer telefonu:</label>
+              <input
+                id="phone"
+                type="text"
+                class="f-form__input"
+                name="phone"
+                required
+              />
+            </div>
+            <div class="f-form__input-wrapper">
+              <label for="email" class="f-form__label">Email:</label>
+              <input
+                id="email"
+                type="email"
+                class="f-form__input"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="f-form__input-wrapper">
+              <label for="message" class="f-form__label">Treść:</label>
+              <textarea
+                id="message"
+                type="text"
+                class="f-form__textarea"
+                rows="5"
+                cols="60"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <div class="f-form__input-wrapper">
+              <button type="submit" class="f-form__submit">Wyślij</button>
+            </div>
+          </form>
+        </div>
+        <div class="c-contact__info">
+          <ul class="c-info-list">
+            <li class="c-info-list__item">
+              <div class="c-info-box">
+                <i class="c-info-box__icon fas fa-map-marker-alt"></i>
+                <div class="c-info-box__wrapper">
+                  <p class="c-info-box__description">Śródmieście 32/3,</p>
+                  <p class="c-info-box__description">16-300 Augustów, Polska</p>
+                </div>
+              </div>
+            </li>
+            <li class="c-info-list__item">
+              <div class="c-info-box">
+                <i class="c-info-box__icon fa-solid fa-phone"></i>
+                <p class="c-info-box__description">
+                  <a href="tel:+4850570187" class="c-info-box__link">
+                    +48 505 701 87
+                  </a>
+                </p>
+              </div>
+            </li>
+            <li class="c-info-list__item">
+              <div class="c-info-box">
+                <i class="c-info-box__icon fa-solid fa-envelope"></i>
+                <p class="c-info-box__description">
+                  <a href="#" class="c-info-box__link"> jmuslugi@gmail.com </a>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
