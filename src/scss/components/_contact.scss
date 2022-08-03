@@ -1,26 +1,27 @@
-.c-contact{
+.c-contact {
+    margin: auto;
 
     font-size: font-size(size-10);
-
-    margin: auto;
 }
-.c-contact__title{
+
+.c-contact__title {
+    margin-bottom: 40px;
+
     font-size: 3.2em;
-text-align: center;
-margin-bottom: 40px;
+    text-align: center;
 }
 
-.c-contact__content{
+.c-contact__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include media(desktop-small){
+
+    @include media(desktop-small) {
         flex-direction: row;
         justify-content: space-around;
     }
 }
 
-
-.c-contact__form-container{
+.c-contact__form-container {
     max-width: 700px;
 }

@@ -14,3 +14,7 @@ slider.init();
 import Calendar from './modules/calendar';
 const calendar = new Calendar();
 calendar.init();
+
+import Cookies from './modules/cookies';
+const cookies = new Cookies();
+cookies.init();

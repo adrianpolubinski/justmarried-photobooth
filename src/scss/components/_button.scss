@@ -1,5 +1,7 @@
 .c-button {
-    background-color: color(gray-1);
+    @include button-reset;
+
+    background-color: color(gray-2);
 }
 
 .c-button__icon {
@@ -11,4 +13,13 @@
     height: 4rem;
 
     border-radius: 25%;
+}
+
+.c-button--cookies {
+    margin-top: 2rem;
+    padding: .5rem;
+
+    font-size: font-size(size-16);
+
+    border: 2px solid color(white-1);
 }
