@@ -1,3 +1,89 @@
 .c-hamburger {
     @include button-reset;
+    @include flex-center;
+
+    width: 5rem;
+    height: 5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include media(desktop-small) {
+        display: none;
+    }
+}
+
+.c-hamburger__lines {
+    position: relative;
+
+    width: 3.6rem;
+    height: .3rem;
+
+    background-color: color(white-1);
+
+    transition: transform 220ms, background-color .5s;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: -1.2rem;
+        left: 0;
+
+        width: 3.6rem;
+        height: .3rem;
+
+        background-color: color(white-1);
+
+        transition: top .3s 220ms cubic-bezier(.46, 1, .83, 1.32), transform 220ms, background-color .5s;
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        top: 1.2rem;
+        left: 0;
+
+        width: 3.6rem;
+        height: .3rem;
+
+        background-color: color(white-1);
+
+        transition: top .3s 220ms cubic-bezier(.46, 1, .83, 1.32), opacity 220ms, background-color .5s;
+    }
+}
+
+.c-hamburger:hover .c-hamburger__lines {
+    background-color: color(brand-color);
+
+    &::before {
+        background-color: color(brand-color);
+    }
+
+    &::after {
+        background-color: color(brand-color);
+    }
+}
+
+.c-header.is-open .c-hamburger__lines {
+    transform: rotate(45deg);
+
+    transition: transform 220ms .3s, background-color .5s;
+
+    &::before {
+        top: 0;
+        transform: rotate(-90deg);
+
+        transition: top .3s cubic-bezier(.37, -.79, .37, .93), transform 220ms .3s, background-color .5s;
+    }
+
+    &::after {
+        top: 0;
+
+        opacity: 0;
+
+        transition: top .3s cubic-bezier(.37, -.79, .37, .93), opacity 0s .3s, background-color .5s;
+    }
 }

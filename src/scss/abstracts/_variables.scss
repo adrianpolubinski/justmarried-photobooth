@@ -5,49 +5,48 @@ $breakpoints: (
     desktop-small: 1200px,
     desktop: 1400px
 );
-
 $orientations: (
     portrait: portrait,
     landscape: landscape
 );
-
 $colors: (
     white-1: #FFFFFF,
     black-1: #000000,
+    gray-1: #808080,
+    gray-4: #FAFAFA,
+    bg-body-1: #070918,
+    brand-color: #E05ECF,
 );
-
 $font-sizes: (
-  size-16: 1.6rem,
+    size-16: 1.6rem,
+    size-18: 1.8rem,
+    size-20: 2rem,
+    size-32: 3.2rem,
+    size-50: 5rem
 );
-
 $line-heights: (
-  size-1-25: 1.25,
+    size-1-25: 1.25,
 );
-
 $font-weights: (
-  regular: 400,
-  semibold: 600,
-  bold: 700,
+    regular: 400,
+    semibold: 600,
+    bold: 700,
 );
-
 $fonts: (
     main: #{'Georama',
     sans-serif}
 );
-
 $spacings: (
     size-100: 10rem,
 );
-
 $z-indexes: (
-  hidden: -1px,
-  base: 1,
-  popup: 9,
-  header: 10,
-  overlay: 98,
-  modal: 99,
+    hidden: -1px,
+    base: 1,
+    popup: 9,
+    header: 10,
+    overlay: 98,
+    modal: 99,
 );
-
 $size-inner-padding-val: 2rem;
 $size-inner-padding: 0 $size-inner-padding-val;
 $size-inner-width: 122rem;

@@ -1,4 +1,7 @@
-import Hamburger from "./modules/hamburger";
-
+import Hamburger from './modules/hamburger';
 const hamburger = new Hamburger();
 hamburger.init();
+
+import BrandAnimation from './animations/brand';
+const brandAnimation = new BrandAnimation();
+brandAnimation.init();

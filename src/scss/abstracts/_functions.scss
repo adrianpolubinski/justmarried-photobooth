@@ -1,12 +1,13 @@
-/* stylelint-disable at-rule-empty-line-before */
+/* stylelint-disable */
 @use 'sass:map';
 
 @function get-value-from-map($map, $keys...) {
     @each $key in $keys {
-        @if (map-has-key($map, $key) == false) {
+        @if  map-has-key($map, $key) == false {
             @warn 'Invalid key: \'#{$key}\'.';
             @return null;
         }
+
         $map: map-get($map, $key);
     }
     @return $map;
@@ -45,6 +46,7 @@
 }
 
 @function infix($breakpoint) {
+
     $value: map.get($breakpoints, $breakpoint);
 
     @if $value > 0 {

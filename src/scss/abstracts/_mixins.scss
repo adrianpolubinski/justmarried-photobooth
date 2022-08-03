@@ -1,8 +1,11 @@
+/* stylelint-disable */
 @mixin font-smoothing($value: on) {
     @if $value == on {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-    } @else {
+    }
+
+    @else {
         -webkit-font-smoothing: subpixel-antialiased;
         -moz-osx-font-smoothing: auto;
     }
@@ -38,24 +41,26 @@
 
 @mixin button-reset() {
     padding: 0;
+
+    background: none;
     border: none;
     outline: none;
-    background: none;
 }
 
 @mixin list-reset() {
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
 @mixin input-reset {
-   background: none;
-   border: none;
+    background: none;
+    border: none;
 
-   &:focus {
-      outline: 0;
-   }
+    &:focus {
+        outline: 0;
+    }
 }
 
 @mixin flex-center() {
@@ -115,8 +120,8 @@
 }
 
 @mixin flex-center-horizontally {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 @mixin generate-font-size-utilities() {
