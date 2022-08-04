@@ -26,14 +26,14 @@
 
 .c-legend-list__item--one-term{
     &::before{
-    background-color: color(orange-1);
+    border: .3rem solid color(orange-1);
     }
 }
 
 
 .c-legend-list__item--two-term{
     &::before{
-    background-color: color(red-1);
+        border: .3rem solid color(red-1);
     }
 }
 

@@ -1,6 +1,6 @@
 .c-slider {
     position: relative;
-
+    border-bottom: .5rem solid color(brand);
     height: 40vh;
 
     @include media(mobile) {

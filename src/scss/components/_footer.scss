@@ -1,6 +1,6 @@
 .c-footer{
     @include flex-center-horizontally;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     border-top: .3rem solid color(brand);
 }
