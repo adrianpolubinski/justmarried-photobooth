@@ -1,31 +1,39 @@
 .c-slide-box {
-  @include flex-center-vertically;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  width: 70%;
-  height: 30%;
-  padding: 10px;
-  transition: 0.3s;
-  transform: translateX(-50%);
-  text-align: center;
-  color: color(white-1);
-  box-shadow: 0 0 2rem color(black-1);
-  border-radius: 2rem;
-  background-color: color(black-1-75);
-  font-size: font-size(size-18);
+    @include flex-center-vertically;
 
-@include media(mobile) {
-    max-width: 650px;
-    border-width: 2px;
-    font-size: font-size(size-32);
-  }
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
 
-@include media(desktop) {
-    max-width: 800px;
-    height: 20%;
-    border-width: 3px;
-    font-size: font-size(size-40);
-  }
+    width: 70%;
+    height: 30%;
+    padding: 10px;
+
+    font-size: font-size(size-18);
+    color: color(white-1);
+    text-align: center;
+
+    background-color: color(black-1-75);
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem color(black-1);
+
+    transition: .3s;
+
+    @include media(mobile) {
+        max-width: 650px;
+
+        font-size: font-size(size-32);
+
+        border-width: 2px;
+    }
+
+    @include media(desktop) {
+        max-width: 800px;
+        height: 20%;
+
+        font-size: font-size(size-40);
+
+        border-width: 3px;
+    }
 }
-

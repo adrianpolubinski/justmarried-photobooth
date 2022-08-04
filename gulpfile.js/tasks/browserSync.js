@@ -6,10 +6,12 @@ const browserSyncTask = () => {
         'src/views/**/*.njk',
         'src/scss/**/*.scss',
         'src/js/**/*.js',
-        'src/img/**/*.{jpg,jpeg,png,gif}'
+        'src/img/**/*.{jpg,jpeg,png,gif}',
+        'src/fonts/**/*.{woff, woff2}'
      ];
 
     gulp.watch(["src/views/**/*.njk"]).on("change", gulp.parallel("nunjucks"));
+    gulp.watch(["src/views/**/*.njk"]).on("change", gulp.parallel("viewsLoad"));
     gulp.watch(["src/scss/**/*.scss"]).on("change", gulp.parallel("sass"));
     gulp.watch(["src/js/**/*.js"]).on("change", gulp.parallel("webpack"));
     gulp.watch(["src/img/**/*.{jpg,jpeg,png,gif}"]).on("change", gulp.parallel("imgLoad"));

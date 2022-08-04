@@ -1,0 +1,30 @@
+.c-reservation-popup {
+    display: none;
+}
+
+.c-reservation-popup.is-visible {
+    @include flex-center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    color: color(white-1);
+
+    background-color: color(bg-body-1-50);
+}
+
+.c-reservation-popup__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    background-color: color(gray-1);
+}

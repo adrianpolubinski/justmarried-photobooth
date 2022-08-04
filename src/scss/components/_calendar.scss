@@ -37,3 +37,7 @@
 .c-calendar__legend-list-wrapper {
     @include flex-center-horizontally;
 }
+
+.c-calendar__day-list-wrapper {
+    position: relative;
+}

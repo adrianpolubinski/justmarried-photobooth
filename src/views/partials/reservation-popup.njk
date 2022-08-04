@@ -1,0 +1,38 @@
+<div class="c-reservation-popup js-reservation-popup">
+    <div class="c-reservation-popup__header">
+        <p class="c-reservation-popup__title">Zarezerwuj termin:</p>
+        <p class="c-reservation-popup__date js-reservation-date"></p>
+    </div>
+
+    <div class="c-reservation-popup__form-container">
+        <form class="c-reservation-form" method="POST" action="calendarTerm">
+            <div class="c-reservation-form__input-wrapper">
+                <label for="name" class="c-reservation-from__label">Imie i nazwisko:</label>
+                <input id="name" name="name" type="text" class="c-reservation-popup__input"></input>
+            </div>
+            <div class="c-reservation-form__input-wrapper">
+                <label for="phone" class="c-reservation-from__label">Numer telefonu:</label>
+                <input id="phone" name="phone" type="text" class="c-reservation-popup__input"></input>
+            </div>
+            <div class="c-reservation-form__input-wrapper">
+                <label for="email" class="c-reservation-from__label">Email:</label>
+                <input id="email" name="email" type="email" class="c-reservation-popup__input"></input>
+            </div>
+
+            <div class="c-reservation-form__input-wrapper">
+                <label for="package" class="c-reservation-from__label">Wybierz Pakiet:</label>
+                <select id="package" name="package" class="c-reservation-popup__input">
+                    <option value="2 godziny">Pakiet Small (2 Godziny)</option>
+                    <option value="3 godziny">Pakiet Medium (3 Godziny)</option>
+                    <option value="4 godziny">Pakiet High (4 Godziny)</option>
+                </select>
+            </div>
+            <input type="hidden" name="date" value="asd" class="js-date-hidden">
+            <div class="c-reservation-form__input-wrapper">
+                <button type="submit" class="c-reservation-form__submit">Zarezerwuj</button>
+                <button type="reset" class="c-reservation-form__reset">Anuluj</button>
+            </div>
+
+        </form>
+    </div>
+</div>

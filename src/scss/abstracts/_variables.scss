@@ -12,14 +12,15 @@ $orientations: (
 $colors: (
     white-1: #FFFFFF,
     black-1: #000000,
+    black-1-75: #000000BF,
     red-1: #FF0000,
     green-1: #00FF00,
     orange-1: #FFA500,
-    black-1-75: rgb(0 0 0 / 75%),
     gray-1: #808080,
-    gray-2: #6c6c6c,
+    gray-2: #6C6C6C,
     gray-4: #FAFAFA,
     bg-body-1: #070918,
+    bg-body-1-50: rgba(7, 9, 24, 50%),
     brand: #E05ECF,
 );
 $font-sizes: (
