@@ -20,7 +20,7 @@ exports.calendarTerm = async (req, res) => {
         Date: req.body.date,
         Email: req.body.email,
         Phone: req.body.phone,
-        Packet: req.body.packages,
+        Packet: req.body.package,
         Accepted: false,
       });
 

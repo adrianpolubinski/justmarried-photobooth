@@ -1,3 +1,8 @@
 .s {
     @include generate-spacing-utilities;
 }
+
+
+.s-bottom-100 {
+    margin-bottom: 10rem;
+}

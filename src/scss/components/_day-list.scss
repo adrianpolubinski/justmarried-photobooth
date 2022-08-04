@@ -42,3 +42,12 @@
 .c-day-list__day--next-month {
     color: color(gray-1);
 }
+
+
+.c-day-list__day--reserved-once {
+    border: .3rem solid color(orange-1);
+}
+
+.c-day-list__day--reserved-twice {
+    border: .3rem solid color(red-1);
+}
