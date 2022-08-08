@@ -20,7 +20,8 @@
 @import
     './layouts/header',
     './layouts/cookies',
-    './layouts/inner'   ;
+    './layouts/inner',
+    './layouts/signin';
 
 // Components
 @import
@@ -28,6 +29,7 @@
     './components/calendar',
     './components/contact',
     './components/cookies',
+    './components/date',
     './components/day-list',
     './components/footer',
     './components/form',
@@ -45,6 +47,9 @@
     './components/pagination-list',
     './components/reservation-form',
     './components/reservation-popup',
+    './components/reservations-list.scss',
+    './components/signin-form',
+    './components/signin',
     './components/slide-box',
     './components/slider-navigation',
     './components/slider',

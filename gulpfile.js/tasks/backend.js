@@ -1,15 +1,16 @@
 const gulp = require('gulp');
 
-const defaultTask = async () => {
+const backendTask = () => {
   const runTasks = gulp.series(
     'fontsLoad',
     'imgLoad',
-    'nunjucks',
+    'viewsLoad',
     'sass',
     'webpack',
-    'browserSync'
+    'backendBrowserSync'
   );
   runTasks();
 };
-gulp.task('default', defaultTask);
-module.exports = defaultTask;
+
+gulp.task('backend', backendTask);
+module.exports = backendTask;

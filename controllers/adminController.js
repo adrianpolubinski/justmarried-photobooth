@@ -1,16 +1,18 @@
-const { render } = require("ejs");
-const reservation = require("../models/reservation");
+const reservation = require('../models/reservation');
 
 exports.admin = async (req, res) => {
   try {
-    reservation.find({ Accepted: "No" }, (err, docs) => {
-      res.render("admin", {
-        title: "Just Married || Administracja",
-        reservations: docs,
+    if (!req.session.admin) res.redirect('/signin');
+    else {
+      reservation.find({ Accepted: 'false' }, (err, docs) => {
+
+        res.render('pages/admin', {
+            reservations: docs,
+        });
       });
-    });
+    }
   } catch (error) {
-    res.status(500).send({ message: error.message || "Error Occured" });
+    res.status(500).send({ message: error.message || 'Error Occured' });
   }
 };
 
@@ -21,7 +23,7 @@ exports.updateReservation = async (req, res) => {
     if (action === "Accept") {
       reservation.updateOne(
         { _id: id },
-        { $set: { Accepted: "Yes" } },
+        { $set: { Accepted: true } },
         (err, doc) => {
           console.log("Aktualizacja pomyślna");
         }

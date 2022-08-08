@@ -139,7 +139,7 @@ export default class Calendar {
   showPopupHander = (day) => {
     if (!this.reservationPopup.classList.contains('is-visible')) {
       const reservationDate =
-        day.textContent + '-' + (this.date.getMonth() + 1) + '-' + this.date.getFullYear();
+        day.textContent + '-' + (this.months[this.date.getMonth()]) + '-' + this.date.getFullYear();
       this.reservationDate.textContent = reservationDate;
       this.dateHidden.value = reservationDate;
       this.reservationPopup.classList.toggle('is-visible');
@@ -150,7 +150,7 @@ export default class Calendar {
     const days = [];
     fetch(
       `http://localhost:3000/api/reservations/${this.date.getFullYear()}/${
-        this.date.getMonth() + 1
+        this.months[this.date.getMonth()]
       }`
     )
       .then((res) => res.json())
