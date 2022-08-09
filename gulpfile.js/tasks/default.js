@@ -2,6 +2,7 @@ const gulp = require('gulp');
 
 const defaultTask = async () => {
   const runTasks = gulp.series(
+    'clean',
     'fontsLoad',
     'imgLoad',
     'nunjucks',

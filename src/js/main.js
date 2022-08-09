@@ -18,3 +18,7 @@ calendar.init();
 import Cookies from './modules/cookies';
 const cookies = new Cookies();
 cookies.init();
+
+import Scroller from './modules/scroller';
+const scroller = new Scroller();
+scroller.init();
