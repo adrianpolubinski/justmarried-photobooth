@@ -4,7 +4,7 @@
       <h1 class="c-contact__title">Skontaktuj się z nami</h1>
       <div class="c-contact__content">
         <div class="c-contact__form-container">
-          <form class="f-form" method="POST" action="mailer">
+          <form class="f-form" method="POST" action="sendContactMessage">
             <div class="f-form__input-wrapper">
               <label for="username" class="f-form__label"
                 >Imię i nazwisko:</label
@@ -37,6 +37,17 @@
                 required
               />
             </div>
+
+            <div class="f-form__input-wrapper">
+                <label for="subject" class="f-form__label">Temat:</label>
+                <input
+                  id="subject"
+                  type="text"
+                  class="f-form__input"
+                  name="subject"
+                  required
+                />
+              </div>
 
             <div class="f-form__input-wrapper">
               <label for="message" class="f-form__label">Treść:</label>

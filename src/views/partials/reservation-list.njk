@@ -1,0 +1,47 @@
+<div class="l-reservations-list">
+    <div class="l-inner">
+      <div class="c-reservations-list">
+          {% for reservation in reservations %}
+
+        <div class="c-reservations-list__reservation">
+          <div class="c-reservations-list__date-block-container">
+            <div class="c-date-block">
+              <p class="c-date-block__day">{{ reservation.Date.split("-")[0] }}</p>
+              <p class="c-date-block__month">{{ reservation.Date.split("-")[1] }}</p>
+              <p class="c-date-block__year">{{ reservation.Date.split("-")[2] }}</p>
+            </div>
+          </div>
+
+          <div class="c-reservations-list__reservation-info">
+            <div class="c-reservations-list__packet-container">
+              <p class="c-reservations-list__packet">{{ reservation.Packet }}</p>
+            </div>
+
+            <div class="c-reservations-list__client-info">
+              <p class="c-reservations-list__name">{{ reservation.Name }}</p>
+              <p class="c-reservations-list__email">{{ reservation.Email }}</p>
+              <p class="c-reservations-list__phone">{{ reservation.Phone }}</p>
+              <div class="c-reservations-list__action">
+                <form method="post" action="admin/updateReservation">
+                  <input type="hidden" name="id" value="{{ reservation._id }}" />
+                  <input
+                    type="submit"
+                    name="action"
+                    value="Akceptuj"
+                    class="c-reservations-list__accept"
+                  />
+                  <input
+                    type="submit"
+                    name="action"
+                    value="Odrzuć"
+                    class="c-reservations-list__reject"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>

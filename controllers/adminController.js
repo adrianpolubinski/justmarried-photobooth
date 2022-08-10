@@ -39,3 +39,12 @@ exports.updateReservation = async (req, res) => {
     res.status(500).send({ message: error.message || "Error Occured" });
   }
 };
+
+exports.logout = async (req, res)=> {
+    try {
+        req.session = null
+        res.redirect("/");
+      } catch (error) {
+        res.status(500).send({ message: error.message || "Error Occured" });
+      }
+}

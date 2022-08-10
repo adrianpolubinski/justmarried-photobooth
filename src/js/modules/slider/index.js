@@ -52,6 +52,13 @@ export default class Slider {
     this.sliderNavigationButtonLeft.addEventListener('mouseenter', this.stopAutoPlayHandler);
     this.sliderNavigationButtonRight.addEventListener('mouseleave', this.startAutoPlayHandler);
     this.sliderNavigationButtonRight.addEventListener('mouseenter', this.stopAutoPlayHandler);
+    this.paginationItemsArray.forEach((paginationItem, index) => {
+      paginationItem.addEventListener('click', () => {
+        this.changeStateHandler(this.currentSlide);
+        this.currentSlide = index;
+        this.changeStateHandler(this.currentSlide);
+      });
+    });
   }
 
   generateSliderHandler = () => {
@@ -107,4 +114,6 @@ export default class Slider {
     }
     this.changeStateHandler(this.currentSlide);
   };
+
+
 }

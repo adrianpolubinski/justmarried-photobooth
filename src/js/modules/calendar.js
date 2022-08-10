@@ -162,7 +162,6 @@ export default class Calendar {
 
         this.actualMonthDayArray.forEach((e) => {
           const counter = days.filter((x) => e.textContent == x).length;
-          console.log(counter);
           if (counter == 1) {
             e.classList.add('c-day-list__day--reserved-once');
           } else if (counter >= 2) {

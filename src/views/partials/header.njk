@@ -1,4 +1,8 @@
+{% if title=="Just Married | Administracja" %}
+<header class="l-header">
+{% else %}
 <header class="l-header js-header-layout">
+{% endif %}
   <div class="l-inner l-inner--padding-0">
     <div class="c-header js-header">
       <div class="c-header__background"></div>
@@ -7,6 +11,10 @@
           >{% include "partials/brand.njk" %}
         </a>
       </div>
+
+
+
+
       <div class="c-header__hamburger-container">
         <button class="c-hamburger js-hamburger">
           <span class="c-hamburger__lines"></span>
@@ -14,6 +22,7 @@
       </div>
       <nav class="c-header__nav">
         <ul class="c-main-nav">
+            {% if title!="Just Married | Administracja" %}
           <li class="c-main-nav__item">
             <a href="#slider-layout" class="c-main-nav__link">
               <i class="fas fa-home-lg c-main-nav__ico"></i>Strona Główna
@@ -40,7 +49,16 @@
               <i class="fas fa-sign-in c-main-nav__ico"></i>Administracja
             </a>
           </li>
+          {% endif %}
+          {% if title=="Just Married | Administracja" %}
+          <li class="c-main-nav__item">
+            <a href="admin/logout" class="c-main-nav__link">
+              <i class="fas fa-sign-in c-main-nav__ico"></i>Wyloguj się
+            </a>
+          </li>
+          {% endif %}
         </ul>
+
       </nav>
     </div>
   </div>
