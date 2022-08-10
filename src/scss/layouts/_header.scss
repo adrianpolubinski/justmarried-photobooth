@@ -1,3 +1,18 @@
 .l-header {
+    position: fixed;
+    z-index: z-index(header);
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: color(bg-body-1);
     border-bottom: .5rem solid color(brand);
+
+    transition: transform .5s ease;
+}
+
+.l-header.is-hidden {
+    transform: translateY(-120%);
+
+    transition: transform .5s ease;
 }

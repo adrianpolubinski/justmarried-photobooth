@@ -1,13 +1,13 @@
 .c-header {
     @include flex-center-vertically;
 
-    z-index: z-index(header);
     position: relative;
 
     justify-content: space-between;
 
     height: 7.5rem;
 }
+
 
 .c-header__background {
     position: absolute;
@@ -23,6 +23,7 @@
 
 .c-header__logo {
     z-index: 2;
+
     margin-left: 2rem;
 }
 
@@ -33,8 +34,9 @@
 }
 
 .c-header__hamburger-container {
-    margin-right: 2rem;
     z-index: 2;
+
+    margin-right: 2rem;
 }
 
 .c-header__nav {

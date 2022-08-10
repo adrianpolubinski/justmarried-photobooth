@@ -2,6 +2,7 @@ html {
     @include font-smoothing(on);
 
     scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
 
     height: 100%;
 
@@ -14,9 +15,9 @@ body {
     font-family: font(main);
     font-size: font-size(size-16);
     line-height: line-height(size-1-25);
+    color: color(white-1);
 
     background-color: color(bg-body-1);
-    color: color(white-1);
 }
 
 // Typography helpers

@@ -1,3 +1,7 @@
+import Header from './modules/header';
+const header = new Header();
+header.init();
+
 import Hamburger from './modules/hamburger';
 const hamburger = new Hamburger();
 hamburger.init();
@@ -18,7 +22,3 @@ calendar.init();
 import Cookies from './modules/cookies';
 const cookies = new Cookies();
 cookies.init();
-
-import Scroller from './modules/scroller';
-const scroller = new Scroller();
-scroller.init();
