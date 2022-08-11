@@ -7,7 +7,6 @@ const path = require("path");
 const nunjucks = require('nunjucks');
 const bodyParser = require("body-parser");
 
-
 const app = express();
 
 app.set("view engine", "njk")

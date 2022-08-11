@@ -5,6 +5,11 @@ const router = express.Router();
 const adminController = require("../controllers/adminController");
 
 router.get("/", adminController.admin);
+router.get("/accepted", adminController.accepted);
+router.get("/rejected", adminController.rejected);
+
+
+
 router.post("/updateReservation", adminController.updateReservation);
 router.get("/logout", adminController.logout);
 

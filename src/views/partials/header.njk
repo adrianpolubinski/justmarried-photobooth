@@ -1,4 +1,4 @@
-{% if title=="Just Married | Administracja" %}
+{% if page=="admin" %}
 <header class="l-header">
 {% else %}
 <header class="l-header js-header-layout">
@@ -22,7 +22,7 @@
       </div>
       <nav class="c-header__nav">
         <ul class="c-main-nav">
-            {% if title!="Just Married | Administracja" %}
+            {% if page!="admin" %}
           <li class="c-main-nav__item">
             <a href="#slider-layout" class="c-main-nav__link">
               <i class="fas fa-home-lg c-main-nav__ico"></i>Strona Główna
@@ -50,7 +50,24 @@
             </a>
           </li>
           {% endif %}
-          {% if title=="Just Married | Administracja" %}
+          {% if page=="admin" %}
+          <li class="c-main-nav__item">
+            <a href="/admin" class="c-main-nav__link">
+                <i class="fa-solid fa-circle-question c-main-nav__ico"></i>Oczekujące
+            </a>
+          </li>
+
+          <li class="c-main-nav__item">
+            <a href="admin/accepted" class="c-main-nav__link">
+                <i class="fa-solid fa-circle-check c-main-nav__ico"></i>Zaakceptowane
+            </a>
+          </li>
+          <li class="c-main-nav__item">
+            <a href="admin/rejected" class="c-main-nav__link">
+                <i class="fa-solid fa-circle-xmark c-main-nav__ico"></i>Odrzucone
+            </a>
+          </li>
+
           <li class="c-main-nav__item">
             <a href="admin/logout" class="c-main-nav__link">
               <i class="fas fa-sign-in c-main-nav__ico"></i>Wyloguj się

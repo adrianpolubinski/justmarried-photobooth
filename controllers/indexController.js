@@ -17,7 +17,8 @@ exports.calendarTerm = async (req, res) => {
       Email: req.body.email,
       Phone: req.body.phone,
       Packet: req.body.package,
-      Accepted: false
+      Accepted: false,
+      Rejected: false,
     });
 
     await newReservation.save();

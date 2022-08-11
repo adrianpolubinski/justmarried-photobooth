@@ -116,19 +116,11 @@ export default class Calendar {
 
     this.actualMonthDayArray = document.querySelectorAll(this.selector.actualMonthDay);
     this.setReservationsHandler();
-    this.actualMonthDayArray.forEach((day) => {
-      day.addEventListener('click', () => {
-        this.showPopupHander(day);
-      });
-    });
-    this.setReservationsHandler();
   };
 
   prevMonthChangeHandler = () => {
-    if (this.date.getMonth() > this.actualMonth || this.date.getFullYear() > this.actualYear) {
-      this.date.setMonth(this.date.getMonth() - 1);
-      this.generateCalendarHandler();
-    }
+    this.date.setMonth(this.date.getMonth() - 1);
+    this.generateCalendarHandler();
   };
 
   nextMonthChangeHandler = () => {
@@ -139,7 +131,7 @@ export default class Calendar {
   showPopupHander = (day) => {
     if (!this.reservationPopup.classList.contains('is-visible')) {
       const reservationDate =
-        day.textContent + '-' + (this.months[this.date.getMonth()]) + '-' + this.date.getFullYear();
+        day.textContent + '-' + this.months[this.date.getMonth()] + '-' + this.date.getFullYear();
       this.reservationDate.textContent = reservationDate;
       this.dateHidden.value = reservationDate;
       this.reservationPopup.classList.toggle('is-visible');
@@ -166,6 +158,24 @@ export default class Calendar {
             e.classList.add('c-day-list__day--reserved-once');
           } else if (counter >= 2) {
             e.classList.add('c-day-list__day--reserved-twice');
+          }
+        });
+
+        this.actualMonthDayArray.forEach((day) => {
+          const isFree = !day.classList.contains('c-day-list__day--reserved-twice');
+          const isNextDayFromCurrent =
+            this.actualDay < parseInt(day.textContent) && this.actualMonth == this.date.getMonth();
+          const isNextMonth = this.actualMonth < this.date.getMonth();
+          const isNextYear = this.actualYear < this.date.getFullYear();
+          const isSameYear = this.actualYear == this.date.getFullYear();
+
+          if (
+            isFree &&
+            ((isNextDayFromCurrent && isSameYear) || (isNextMonth && isSameYear) || isNextYear)
+          ) {
+            day.addEventListener('click', () => {
+              this.showPopupHander(day);
+            });
           }
         });
       });

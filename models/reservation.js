@@ -26,6 +26,10 @@ const reservationSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  Rejected: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model("Reservation", reservationSchema);

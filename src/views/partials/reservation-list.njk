@@ -2,7 +2,6 @@
     <div class="l-inner">
       <div class="c-reservations-list">
           {% for reservation in reservations %}
-
         <div class="c-reservations-list__reservation">
           <div class="c-reservations-list__date-block-container">
             <div class="c-date-block">
@@ -24,6 +23,7 @@
               <div class="c-reservations-list__action">
                 <form method="post" action="admin/updateReservation">
                   <input type="hidden" name="id" value="{{ reservation._id }}" />
+                  {% if show=="waiting" %}
                   <input
                     type="submit"
                     name="action"
@@ -36,6 +36,29 @@
                     value="Odrzuć"
                     class="c-reservations-list__reject"
                   />
+                  {% endif %}
+                  {% if show=="accepted" %}
+                  <input
+                  type="submit"
+                  name="action"
+                  value="Anuluj Rezerwację"
+                  class="c-reservations-list__reject"
+                />
+                {% endif %}
+                {% if show=="rejected" %}
+                <input
+                  type="submit"
+                  name="action"
+                  value="Przywróć"
+                  class="c-reservations-list__accept"
+                />
+                <input
+                  type="submit"
+                  name="action"
+                  value="Usuń"
+                  class="c-reservations-list__reject"
+                />
+                {% endif %}
                 </form>
               </div>
             </div>
