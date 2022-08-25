@@ -1,14 +1,19 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 
-  const buildTask = () => {
-    gulp.series(
-        "cleanBuild",
-        gulp.parallel("nunjucks", "sass"),
-        gulp.parallel("htmlBuild", "cssBuild", "imgLoadBuild", "jsBuild"),
-        "serverBuild",
-        "clean"
-      )
-  }
+const buildTask = () => {
+  const runTasks = gulp.series(
+    'buildClean',
+    gulp.parallel('buildViews', 'buildScss', 'buildJs', 'buildImages', 'buildFonts'),
+    gulp.parallel(
+      'buildControllers',
+      'buildMiddleware',
+      'buildModels',
+      'buildRoutes',
+      'buildServer'
+    )
+  );
+  runTasks();
+};
 
-  gulp.task('build', buildTask);
-  module.exports = buildTask;
+gulp.task('build', buildTask);
+module.exports = buildTask;

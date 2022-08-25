@@ -3,7 +3,10 @@
 
 // Abstracts
 @import
-    './abstracts/abstracts';
+    './abstracts/variables',
+    './abstracts/functions',
+    './abstracts/media-config',
+    './abstracts/mixins';
 
 // Bases
 @import
@@ -48,7 +51,7 @@
     './components/pagination-list',
     './components/reservation-form',
     './components/reservation-popup',
-    './components/reservations-list.scss',
+    './components/reservations-list',
     './components/signin-form',
     './components/signin',
     './components/slide-box',

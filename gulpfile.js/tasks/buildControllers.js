@@ -1,12 +1,12 @@
 const gulp = require("gulp");
 const uglify = require("gulp-uglify");
 
-  const controllersBuildTask = () => {
+  const buildControllersTask = () => {
     return gulp
       .src(["controllers/*.js"])
       .pipe(uglify())
       .pipe(gulp.dest("dist/controllers/"));
   }
 
-  gulp.task('controllersBuild', controllersBuildTask);
-  module.exports = controllersBuildTask;
+  gulp.task('buildControllers', buildControllersTask);
+  module.exports = buildControllersTask;

@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
 
-const jsBuildTask = () => {
+const buildJsTask = () => {
     return gulp
       .src("src/js/**/*.js")
       .pipe(
@@ -12,5 +12,5 @@ const jsBuildTask = () => {
       .pipe(gulp.dest("dist/public"));
 }
 
-  gulp.task('jsBuild', jsBuildTask);
-  module.exports = jsBuildTask;
+  gulp.task('buildJs', buildJsTask);
+  module.exports = buildJsTask;
