@@ -3,7 +3,7 @@ const uglify = require("gulp-uglify");
 
   const buildMiddlewareTask = () => {
     return gulp
-      .src(["middleware/*.js"])
+      .src(["src/middleware/*.js"])
       .pipe(uglify())
       .pipe(gulp.dest("dist/middleware/"));
   }

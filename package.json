@@ -11,9 +11,6 @@
     "url": "https://github.com/adrianpolubinski/justmarried-photobooth/issues"
   },
   "scripts": {
-    "dev": "npm-run-all -p nodemon browser-sync",
-    "nodemon": "nodemon server.js",
-    "browser-sync": "browser-sync start -s --files=server.js --no-open --no-notify --reload-delay=500"
   },
   "homepage": "https://github.com/adrianpolubinski/justmarried-photobooth#readme",
   "devDependencies": {
@@ -33,6 +30,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-nunjucks-render": "^2.2.3",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",

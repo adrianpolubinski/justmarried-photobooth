@@ -10,7 +10,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.set("view engine", "njk")
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, '/public/')))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieSession({

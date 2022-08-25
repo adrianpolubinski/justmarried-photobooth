@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
 const changed = require("gulp-changed");
 
-const imgLoadTask = () => {
+const frontendImagesTask = () => {
     return gulp
       .src("src/img/**/*.{jpg,jpeg,png,gif}")
       .pipe(changed("public/img/"))
@@ -10,5 +10,5 @@ const imgLoadTask = () => {
       .pipe(gulp.dest("public/img/"));
 }
 
-gulp.task('imgLoad', imgLoadTask);
-module.exports = imgLoadTask;
+gulp.task('frontendImages', frontendImagesTask);
+module.exports = frontendImagesTask;

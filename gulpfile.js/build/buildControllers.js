@@ -3,7 +3,7 @@ const uglify = require("gulp-uglify");
 
   const buildControllersTask = () => {
     return gulp
-      .src(["controllers/*.js"])
+      .src(["src/controllers/*.js"])
       .pipe(uglify())
       .pipe(gulp.dest("dist/controllers/"));
   }

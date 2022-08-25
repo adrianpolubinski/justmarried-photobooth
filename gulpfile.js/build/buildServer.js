@@ -4,7 +4,7 @@ const uglify = require("gulp-uglify");
 
 const buildServerTask = () => {
     return gulp
-        .src(["server.js"])
+        .src(["src/server.js"])
         .pipe(uglify())
         .pipe(gulp.dest("dist/"));
 }

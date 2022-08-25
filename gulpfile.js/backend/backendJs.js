@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const webpack = require("webpack-stream");
 
-const webpackTask = () => {
+const backendJsTask = () => {
     return gulp
       .src("src/js/**/*.js")
       .pipe(
@@ -10,9 +10,9 @@ const webpackTask = () => {
           mode: "development",
         })
       )
-      .pipe(gulp.dest("public/"))
+      .pipe(gulp.dest("dev/public/"))
       .pipe(browserSync.stream());
 }
 
-gulp.task('webpack', webpackTask);
-module.exports = webpackTask;
+gulp.task('backendJs', backendJsTask);
+module.exports = backendJsTask;

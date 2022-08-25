@@ -3,7 +3,7 @@ const browserSync = require("browser-sync").create();
 const nunjucksRender = require("gulp-nunjucks-render");
 const beautify = require("gulp-beautify");
 
-const nunjucksTask = () => {
+const frontendViewsTask = () => {
     return gulp
       .src("src/views/pages/*.njk")
       .pipe(
@@ -16,5 +16,5 @@ const nunjucksTask = () => {
       .pipe(browserSync.stream());
 }
 
-gulp.task('nunjucks', nunjucksTask);
-module.exports = nunjucksTask;
+gulp.task('frontendViews', frontendViewsTask);
+module.exports = frontendViewsTask;

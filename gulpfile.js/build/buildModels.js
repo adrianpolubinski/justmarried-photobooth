@@ -3,7 +3,7 @@ const uglify = require("gulp-uglify");
 
   const buildModelsTask = () => {
     return gulp
-    .src(["models/*.js"])
+    .src(["src/models/*.js"])
     .pipe(uglify())
     .pipe(gulp.dest("dist/models/"));
   }

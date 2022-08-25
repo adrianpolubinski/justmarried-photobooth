@@ -3,7 +3,7 @@ const uglify = require("gulp-uglify");
 
 const buildRoutesTask = () => {
     return gulp
-      .src(["routes/*.js"])
+      .src(["src/routes/*.js"])
       .pipe(uglify())
       .pipe(gulp.dest("dist/routes/"));
   }

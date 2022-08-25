@@ -6,16 +6,16 @@ const sass = gulpSass(dartSass);
 const sourcemaps = require("gulp-sourcemaps");
 const autoprefixer = require("gulp-autoprefixer");
 
-const sassTask = () => {
+const backendScssTask = () => {
     return gulp
       .src("src/scss/**/*.scss")
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
       .pipe(autoprefixer())
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest("public/"))
+      .pipe(gulp.dest("dev/public/"))
       .pipe(browserSync.stream());
 }
 
-gulp.task('sass', sassTask);
-module.exports = sassTask;
+gulp.task('backendScss', backendScssTask);
+module.exports = backendScssTask;
