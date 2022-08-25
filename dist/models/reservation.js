@@ -1,0 +1,1 @@
+const mongoose=require("mongoose"),reservationSchema=new mongoose.Schema({Name:{type:String,required:!0},Date:{type:String,required:!0},Email:{type:String,lowercase:!0,trim:!0},Phone:{type:String,required:!0},Packet:{type:String,required:!0},Accepted:{type:Boolean,required:!0},Rejected:{type:Boolean,required:!0}});module.exports=mongoose.model("Reservation",reservationSchema);

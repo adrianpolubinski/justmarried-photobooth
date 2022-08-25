@@ -1,0 +1,1 @@
+const reservation=require("../models/reservation");exports.reservations=async(r,a)=>{try{let e=r.params.month+"-"+r.params.year;e=e.replaceAll("undefined",""),reservation.find({Date:{$regex:e,$options:"i"},Accepted:!0,Deleted:!1},(e,r)=>{const s=[];r.forEach(e=>{e={date:e.Date};s.push(e)}),a.json(s)})}catch(e){a.status(500).send({message:e.message||"Error Occured"})}};

@@ -1,0 +1,1 @@
+const mongoose=require("mongoose"),db=(mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:!0,useUnifiedTopology:!0}),mongoose.connection);db.on("error",console.error.bind(console,"connection error: ")),db.once("open",function(){console.log("Connected Database")});

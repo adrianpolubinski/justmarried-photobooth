@@ -1,0 +1,1 @@
+const express=require("express"),router=express.Router(),apiController=require("../controllers/apiController");router.get("/reservations/:year?/:month?/:accept?",apiController.reservations),router.all("*",(r,e)=>{e.status(404).send("<h1>Error resource not found</h1>")}),module.exports=router;
