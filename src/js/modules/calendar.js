@@ -119,12 +119,12 @@ export default class Calendar {
   };
 
   prevMonthChangeHandler = () => {
-    this.date.setMonth(this.date.getMonth() - 1);
+    this.date.setMonth(this.date.getMonth() - 1, 1);
     this.generateCalendarHandler();
   };
 
   nextMonthChangeHandler = () => {
-    this.date.setMonth(this.date.getMonth() + 1);
+    this.date.setMonth(this.date.getMonth() + 1, 1);
     this.generateCalendarHandler();
   };
 
