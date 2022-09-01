@@ -1,0 +1,48 @@
+.c-modal-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    color: color(white-1);
+
+    background-color: color(bg-body-1-50);
+}
+
+.c-modal-loading.is-visible {
+    @include flex-center;
+}
+
+.c-modal-loading__laoder {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+
+    border: 1rem solid color(gray-4);
+    border-top: 1rem solid color(brand);
+    border-radius: 50%;
+
+    animation: spinner .7s linear infinite;
+}
+
+.c-modal-loading__loader-container {
+    position: relative;
+}
+
+.c-modal-loading__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: font-size(size-20);
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

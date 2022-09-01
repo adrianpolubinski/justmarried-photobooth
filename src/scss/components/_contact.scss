@@ -5,8 +5,6 @@
 }
 
 .c-contact__title {
-    margin-bottom: 40px;
-
     font-size: 3.2em;
     text-align: center;
 }
@@ -24,4 +22,12 @@
 
 .c-contact__form-container {
     max-width: 700px;
+}
+
+.c-contact__err-info {
+    margin-bottom: 4rem;
+
+    font-size: font-size(size-12);
+    color: color(red-2);
+    text-align: center;
 }
