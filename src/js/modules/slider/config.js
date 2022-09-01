@@ -1,7 +1,7 @@
 const slidesArray = [
   {
     path: '/img/slider/slider-photo-1.jpg',
-    description: 'Wysokiej jakości sprzęt zagwarantuje wspaniałą zabawę!'
+    description: 'Ogromna ilość unikatowych gadżetów, szablonów i teł!'
   },
   {
     path: '/img/slider/slider-photo-2.jpg',
@@ -9,11 +9,11 @@ const slidesArray = [
   },
   {
     path: '/img/slider/slider-photo-3.jpg',
-    description: 'Nie przegap okazji i już dziś zamów jeden z pakietów dostępny w naszej usłudze!'
+    description: 'Wysokiej jakości sprzęt zagwarantuje wspaniałą zabawę!'
   },
   {
     path: '/img/slider/slider-photo-4.jpg',
-    description: 'Ogromna ilość unikatowych gadżetów, szablonów i teł!'
+    description: 'Już dziś zagwarantuj sobie najlepszą pamiątkę z imprezy!'
   }
 ];
 

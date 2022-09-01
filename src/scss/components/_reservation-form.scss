@@ -2,3 +2,19 @@
     display: flex;
     flex-direction: column;
 }
+
+.c-reservation-form__submit {
+    @include button-reset;
+
+    margin: .5rem 0;
+
+    background-color: color(gray-2);
+}
+
+.c-reservation-form__reset {
+    @include button-reset;
+
+    margin-bottom: .5rem;
+
+    background-color: color(gray-2);
+}

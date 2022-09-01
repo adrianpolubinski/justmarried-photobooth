@@ -30,6 +30,7 @@ export default class Calendar {
     this.actualMonthDayArray = null;
     this.DateHidden = null;
     this.jsResetBtn = null;
+    this.modalLoading = null;
 
     this.selector = {
       buttonPrev: '.js-button-prev',
@@ -40,7 +41,8 @@ export default class Calendar {
       reservationPopup: '.js-reservation-popup',
       actualMonthDay: '.js-actual-month-day',
       dateHidden: '.js-date-hidden',
-      ResetBtn: '.js-reset-btn'
+      ResetBtn: '.js-reset-btn',
+      modalLoading: '.js-modal-loading'
     };
   }
   init() {
@@ -52,6 +54,7 @@ export default class Calendar {
     this.reservationPopup = document.querySelector(this.selector.reservationPopup);
     this.dateHidden = document.querySelector(this.selector.dateHidden);
     this.ResetBtn = document.querySelector(this.selector.ResetBtn);
+    this.modalLoading = document.querySelector(this.selector.modalLoading);
 
     const shouldContinue =
       !!this.buttonPrev &&
@@ -61,7 +64,8 @@ export default class Calendar {
       !!this.reservationDate &&
       !!this.reservationPopup &&
       !!this.dateHidden &&
-      !!this.ResetBtn;
+      !!this.ResetBtn &&
+      !!this.modalLoading;
 
     if (!shouldContinue) return;
 
@@ -78,6 +82,11 @@ export default class Calendar {
     this.buttonNext.addEventListener('click', this.nextMonthChangeHandler);
     this.ResetBtn.addEventListener('click', this.closeReservationPopupHandler);
   }
+
+  changeStatusLoadingModal = () => {
+    this.modalLoading.classList.toggle("is-visible")
+  }
+
 
   generateCalendarHandler = () => {
     const year = this.date.getFullYear();
@@ -119,12 +128,12 @@ export default class Calendar {
   };
 
   prevMonthChangeHandler = () => {
-    this.date.setMonth(this.date.getMonth() - 1);
+    this.date.setMonth(this.date.getMonth() - 1, 1);
     this.generateCalendarHandler();
   };
 
   nextMonthChangeHandler = () => {
-    this.date.setMonth(this.date.getMonth() + 1);
+    this.date.setMonth(this.date.getMonth() + 1, 1);
     this.generateCalendarHandler();
   };
 
@@ -140,6 +149,7 @@ export default class Calendar {
 
   setReservationsHandler = () => {
     const days = [];
+    this.changeStatusLoadingModal();
     fetch(
       `http://localhost:3000/api/reservations/${this.date.getFullYear()}/${
         this.months[this.date.getMonth()]
@@ -178,6 +188,7 @@ export default class Calendar {
             });
           }
         });
+        this.changeStatusLoadingModal();
       });
   };
 
